@@ -35,7 +35,6 @@ macro(test_large_files VARIABLE USE_64_SUFFIX)
 
         if(NOT LARGE_FILES_SUPPORTED)
             # Try with C macro _LARGEFILE_SOURCE
-
             try_compile(LARGE_FILES_SUPPORTED "${CMAKE_BINARY_DIR}"
                     "${CMAKE_MODULE_PATH}/LargeFiles${SUFFIX_64}.c"
                     COMPILE_DEFINITIONS "-D_LARGEFILE${SUFFIX_64}_SOURCE"
